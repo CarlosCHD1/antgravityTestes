@@ -34,7 +34,16 @@ A consistência visual não depende de lembrar de repetir o estilo. O estilo é 
 
 ## Como instalar
 
-No Claude, em Configurações, abra a área de skills e envie o arquivo `dist/diretor-visual.skill`. No Claude Code, basta abrir este repositório, porque a skill já está ligada em `.claude/skills/`.
+A pasta `dist/` traz um pacote para cada ferramenta. Todos são gerados a partir da mesma fonte com `python tools/gerar_pacotes.py`, então basta rodar esse comando depois de qualquer ajuste.
+
+| Ferramenta | Arquivo | Como instalar |
+|---|---|---|
+| Claude | `diretor-visual.skill` | Em Configurações, na área de skills, envie o arquivo |
+| Claude Code | nenhum | Abra este repositório, a skill já está ligada em `.claude/skills/` |
+| Antigravity | `diretor-visual-antigravity.zip` | Extraia na raiz do projeto, o que cria `.agent/skills/diretor-visual/`. Para valer em todos os projetos, mova a pasta `diretor-visual` para `~/.gemini/antigravity/skills/` |
+| ChatGPT | `diretor-visual-chatgpt.zip` | Crie um GPT ou um Projeto, cole o texto de `1-instrucoes-para-colar.md` nas instruções e envie os arquivos de `2-arquivos-de-conhecimento/`. No GPT, ative a execução de código |
+| DeepSeek e outros chats | `diretor-visual-arquivo-unico.md` | Envie o arquivo no início da conversa, ou cole como instrução de sistema |
+| Agentes de terminal | nenhum | Abra este repositório. O `AGENTS.md` da raiz aponta para a skill |
 
 ## Como usar
 
